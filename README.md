@@ -1,6 +1,6 @@
 # EmojiKeyboardDemo
 
-<div style="align: center">
+<div align=center>
     ![](https://upload-images.jianshu.io/upload_images/2887144-f253858cdc91728f.gif?imageMogr2/auto-orient/strip)
 </div>
 
