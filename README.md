@@ -2,6 +2,7 @@
 
 <div align=center><img src="https://upload-images.jianshu.io/upload_images/2887144-f253858cdc91728f.gif?imageMogr2/auto-orient/strip"/></div>
 
+#### 简书地址 https://www.jianshu.com/p/b6494074d4df
 
 ### 实现的功能
 
@@ -117,4 +118,5 @@ self.emojiKeyboard.delegate = self;
     textView.typingAttributes = self.attributes;
 }
 ````
-#### 简书地址 https://www.jianshu.com/p/b6494074d4df
+
+注：暂不支持YYText，使用YYTextView显示不出来表情，使用YYTextLayout计算宽高也会出现问题
