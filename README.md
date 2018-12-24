@@ -1,6 +1,5 @@
 # EmojiKeyboardDemo
 
-### 效果展示
 ![效果展示.gif](https://upload-images.jianshu.io/upload_images/2887144-f253858cdc91728f.gif?imageMogr2/auto-orient/strip)
 
 
