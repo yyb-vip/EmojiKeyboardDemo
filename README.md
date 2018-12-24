@@ -109,7 +109,6 @@ self.emojiKeyboard.delegate = self;
 在UITextView代理中解决在输入拼音还未确定的情况下光标变小, 或者文字变小的问题
 ````
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
-    // 设置输入汉字拼音未确定状态的文字样式
     textView.typingAttributes = self.attributes;
     return YES;
 }
