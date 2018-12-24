@@ -18,8 +18,12 @@
 ## 使用方法
 初始化表情键盘
 ````
-self.emojiKeyboard = [[YBEmojiInputView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 230)];
-self.emojiKeyboard.delegate = self;
+    CGRect rect = CGRectMake(0, 0, self.view.bounds.size.width, 230);
+    YBEmojiConfig *config = [[YBEmojiConfig alloc] init];
+    config.smallEmojiLineCount = 3;
+    config.smallEmojiColumnCount = 7;
+    ...
+    self.emojiKeyboard = [[YBEmojiInputView alloc] initWithFrame:rect config:config delegate:self];
 ````
 切换键盘
 ````
