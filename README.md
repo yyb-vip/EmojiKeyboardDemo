@@ -3,7 +3,7 @@
 ## 效果展示
 ![效果展示.gif](https://upload-images.jianshu.io/upload_images/2887144-f253858cdc91728f.gif?imageMogr2/auto-orient/strip)
 
-# 实现的功能
+## 实现的功能
 > * 支持将表情转换成字符串, 同时也可以将带有表情的字符串转换成表情图片
 > * 可自定义表情包, 可自定义每页表情的行数和列数, 自定义表情包需要两步
 1: 添加表情包到EmojiPackage.bundle目录下
