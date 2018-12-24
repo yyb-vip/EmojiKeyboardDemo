@@ -119,4 +119,4 @@ self.emojiKeyboard.delegate = self;
 }
 ````
 
-注：暂不支持YYText，使用YYTextView显示不出来表情，使用YYTextLayout计算宽高也会出现问题
+注：暂不支持YYText
