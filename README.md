@@ -92,3 +92,4 @@ self.emojiKeyboard.delegate = self;
 
 }
 ````
+#### 简书地址 https://www.jianshu.com/p/b6494074d4df
