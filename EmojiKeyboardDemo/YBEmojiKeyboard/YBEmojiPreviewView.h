@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface YBEmojiPreviewView : UIImageView
 
-- (instancetype)initWithConfig:(YBEmojiConfig *)config;
+- (instancetype)initWithConfig:(YBEmojiConfig * _Nonnull)config;
 
 - (void)setEmojiItemModel:(YBEmojiItemModel *)emojiModel isLargeEmoji:(BOOL)isLargeEmoji;
 

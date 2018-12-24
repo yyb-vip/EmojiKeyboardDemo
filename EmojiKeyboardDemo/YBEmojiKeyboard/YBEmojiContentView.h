@@ -28,7 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) YBEmojiPageView *centerPageView;
 @property (nonatomic, strong) YBEmojiPageView *rightPageView;
 
-- (instancetype)initWithConfig:(YBEmojiConfig *)config;
+- (instancetype)initWithConfig:(YBEmojiConfig * _Nonnull)config;
 
 - (void)setEmojiPackageWith:(YBEmojiGroupModel *)groupModel totalPage:(NSInteger)totalPage;
 

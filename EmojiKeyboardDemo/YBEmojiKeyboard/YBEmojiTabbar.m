@@ -22,7 +22,7 @@
 
 @implementation YBEmojiTabbar
 
-- (instancetype)initWithConfig:(YBEmojiConfig *)config {
+- (instancetype)initWithConfig:(YBEmojiConfig * _Nonnull)config {
     if (self = [super init]) {
         self.backgroundColor = UIColor.whiteColor;
         self.config = config;

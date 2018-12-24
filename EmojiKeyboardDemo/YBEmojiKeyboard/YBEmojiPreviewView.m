@@ -19,7 +19,7 @@
 
 @implementation YBEmojiPreviewBorderView
 
-- (instancetype)initWithConfig:(YBEmojiConfig *)config {
+- (instancetype)initWithConfig:(YBEmojiConfig * _Nonnull)config {
     if (self = [super init]) {
         self.config = config;
         self.backgroundColor = UIColor.clearColor;
@@ -77,7 +77,7 @@
 
 @implementation YBEmojiPreviewView
 
-- (instancetype)initWithConfig:(YBEmojiConfig *)config {
+- (instancetype)initWithConfig:(YBEmojiConfig * _Nonnull)config {
     if (self = [super init]) {
         self.config = config;
         

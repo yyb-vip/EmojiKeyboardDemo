@@ -40,11 +40,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) YBEmojiTabbar *tabbar;
 
-@property (nonatomic, weak) id<YBEmojiInputViewDelegate>delegate;
+@property (nonatomic, weak, nullable) id<YBEmojiInputViewDelegate>delegate;
 
 - (instancetype)initWithFrame:(CGRect)frame;
 
-- (instancetype)initWithFrame:(CGRect)frame config:(nonnull YBEmojiConfig *)config;
+- (instancetype)initWithFrame:(CGRect)frame config:(YBEmojiConfig * _Nonnull)config;
+
+- (instancetype)initWithDlegate:(_Nonnull id <YBEmojiInputViewDelegate>)delegate;
+
+- (instancetype)initWithFrame:(CGRect)frame config:(YBEmojiConfig * _Nonnull)config delegate:(nullable id <YBEmojiInputViewDelegate>)delegate;
 
 @end
 

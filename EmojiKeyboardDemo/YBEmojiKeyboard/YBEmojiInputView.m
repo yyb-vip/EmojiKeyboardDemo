@@ -17,16 +17,21 @@
 @implementation YBEmojiInputView
 
 - (instancetype)initWithFrame:(CGRect)frame {
-    if (self = [super initWithFrame:frame]) {
-        self.config = [YBEmojiConfig defaultConfig];
-        [self addSubViews];
-    }
-    return self;
+    return [self initWithFrame:frame config:[YBEmojiConfig defaultConfig]];
 }
 
-- (instancetype)initWithFrame:(CGRect)frame config:(YBEmojiConfig *)config {
+- (instancetype)initWithFrame:(CGRect)frame config:(YBEmojiConfig * _Nonnull)config {
+    return [self initWithFrame:frame config:config delegate:nil];
+}
+
+- (instancetype)initWithDlegate:(_Nonnull id <YBEmojiInputViewDelegate>)delegate {
+    return [self initWithFrame:CGRectZero config:[YBEmojiConfig defaultConfig] delegate:delegate];
+}
+
+- (instancetype)initWithFrame:(CGRect)frame config:(YBEmojiConfig * _Nonnull)config delegate:(nullable id <YBEmojiInputViewDelegate>)delegate {
     if (self = [super initWithFrame:frame]) {
         self.config = config;
+        self.delegate = delegate;
         [self addSubViews];
     }
     return self;

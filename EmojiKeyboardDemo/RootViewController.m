@@ -106,8 +106,11 @@
     self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
     
-    self.emojiKeyboard = [[YBEmojiInputView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 230)];
-    self.emojiKeyboard.delegate = self;
+    CGRect rect = CGRectMake(0, 0, self.view.bounds.size.width, 230);
+    YBEmojiConfig *config = [[YBEmojiConfig alloc] init];
+    
+    // ...
+    self.emojiKeyboard = [[YBEmojiInputView alloc] initWithFrame:rect config:config delegate:self];
     
     self.switcher = [UISwitch new];
     [self.switcher addTarget:self action:@selector(swichValueDidChanged:) forControlEvents:UIControlEventValueChanged];
@@ -128,7 +131,7 @@
 
 #pragma mark - UITableViewDelegate, UITableViewDataSource
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    // label 距离上下为h之和为20, 多加1为了协调在输入表情的时候高度计算会不正确的问题, 会导致显示....
+    // label 距离上下为h之和为20, 多加1为了协调在输入表情的时候高度计算会不正确的问题, 会导致显示 ...
     return self.dataSource[indexPath.row].cell_h + 21;
 }
 

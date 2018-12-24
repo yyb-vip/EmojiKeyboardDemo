@@ -29,7 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, weak) id<YBEmojiTabbarDelegate>delegate;
 
-- (instancetype)initWithConfig:(YBEmojiConfig *)config;
+- (instancetype)initWithConfig:(YBEmojiConfig * _Nonnull)config;
 
 @end
 

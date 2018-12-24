@@ -23,7 +23,7 @@
 
 @implementation YBEmojiContentView
 
-- (instancetype)initWithConfig:(YBEmojiConfig *)config {
+- (instancetype)initWithConfig:(YBEmojiConfig * _Nonnull)config {
     if (self = [super init]) {
         self.config = config;
         self.pageFlag = 0;

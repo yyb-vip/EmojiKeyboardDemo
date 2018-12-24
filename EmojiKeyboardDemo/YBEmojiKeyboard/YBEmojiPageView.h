@@ -29,7 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface YBEmojiPageView : UIView
 
-- (instancetype)initWithConfig:(YBEmojiConfig *)config;
+- (instancetype)initWithConfig:(YBEmojiConfig * _Nonnull)config;
 
 - (void)configEmojisButtonWith:(YBEmojiGroupModel *)groupModel pageIndex:(NSInteger)pageIndex;
 
