@@ -35,7 +35,7 @@ self.emojiKeyboard.delegate = self;
     [self.inputBar.textView becomeFirstResponder];
 }
 ````
-实现代理方法
+实现代理方法, 下边这两个方法代码基本上都是一样的
 ````
 // 点击表情
 - (void)inputView:(YBEmojiInputView *)inputView clickedEmojiWith:(YBEmojiItemModel *)emoji {
