@@ -23,7 +23,7 @@
         [self.sendBtn setTitle:@"发送" forState:UIControlStateNormal];
         [self addSubview:self.sendBtn];
         
-        self.textView = [[UITextView alloc] init];
+        self.textView = [[YBEmojiTextView alloc] init];
         self.textView.layer.borderColor = [UIColor colorWithRed:0.85 green:0.85 blue:0.85 alpha:1.0].CGColor;
         self.textView.layer.cornerRadius = 5;
         self.textView.layer.borderWidth = 1.0;
