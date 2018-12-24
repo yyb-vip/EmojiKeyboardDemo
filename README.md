@@ -91,4 +91,31 @@ self.emojiKeyboard.delegate = self;
 
 }
 ````
+在UITextView的代理中替换表情
+````
+- (void)textViewDidChange:(UITextView *)textView {
+    textView.typingAttributes = self.attributes;
+    if (!textView.markedTextRange) {
+        NSRange selectedRange = textView.selectedRange;
+        NSAttributedString *attributedString = [YBEmojiDataManager.manager replaceEmojiWithAttributedString:textView.attributedText attributes:self.attributes];
+        NSUInteger offset = textView.attributedText.length - attributedString.length;
+        textView.attributedText = attributedString;
+        textView.selectedRange = NSMakeRange(selectedRange.location - offset, 0);
+    }else {
+        // 输入汉字拼音未确定状态, 不做处理
+    }
+}
+````
+在UITextView代理中解决在输入拼音还未确定的情况下光标变小, 或者文字变小的问题
+````
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
+    // 设置输入汉字拼音未确定状态的文字样式
+    textView.typingAttributes = self.attributes;
+    return YES;
+}
+
+- (void)textViewDidBeginEditing:(UITextView *)textView {
+    textView.typingAttributes = self.attributes;
+}
+````
 #### 简书地址 https://www.jianshu.com/p/b6494074d4df
