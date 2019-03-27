@@ -26,7 +26,7 @@
 
 - (NSMutableAttributedString *)replaceEmojiWithPlanString:(NSString *)planString attributes:(nullable NSDictionary<NSAttributedStringKey, id> *)attributes {
     NSAttributedString *attStr = [[NSAttributedString alloc] initWithString:planString attributes:attributes];
-    return [self replaceEmojiWithAttributedString:attStr attributes:nil];
+    return [self replaceEmojiWithAttributedString:attStr attributes:attributes];
 }
 
 - (NSMutableAttributedString *)replaceEmojiWithAttributedString:(NSAttributedString *)attributedString attributes:(nullable NSDictionary<NSAttributedStringKey, id> *)attributes {
