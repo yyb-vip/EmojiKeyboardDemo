@@ -39,7 +39,7 @@
     [self.inputBar.textView becomeFirstResponder];
 }
 ````
-实现代理方法, 下边这两个方法代码基本上都是一样的
+实现代理方法, 下边这两个方法代码基本上都是一样的, 直接拷贝过去就行
 ````
 // 点击表情
 - (void)inputView:(YBEmojiInputView *)inputView clickedEmojiWith:(YBEmojiItemModel *)emoji {
