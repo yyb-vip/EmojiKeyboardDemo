@@ -123,4 +123,23 @@
 }
 ````
 
+## 解决在ios14上图片显示不出来的bug
+```
+// 在YBEmojiGifImageView中对displayLayer方法做如下修改
+- (void)displayLayer:(CALayer *)layer
+{
+    if (!self.animatedImage || [self.animatedImage.images count] == 0) {
+        if (@available(iOS 14.0, *)) {
+            [super displayLayer:layer];
+        }
+        return;
+    }
+    //NSLog(@"display index: %luu", (unsigned long)self.currentFrameIndex);
+    if(self.currentFrame && ![self.currentFrame isKindOfClass:[NSNull class]]) {
+        layer.contents = (__bridge id)([self.currentFrame CGImage]);
+    }
+}
+```
+
+
 注：暂不支持YYText
